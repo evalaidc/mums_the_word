@@ -1,0 +1,36 @@
+[
+  {
+    "photo_url": "http://www.algonquinhotel.com/wp-content/uploads/2015/02/blue-bar.jpg",
+    "title": "Blue Bar",
+    "blurb": "Blue Bar is a secret location only those who are really searching will find.",
+    "author": "Eric",
+    "longitude": 23 ,
+    "latitude": 47
+  },
+  {
+    "photo_url": "https://washington-org.s3.amazonaws.com/s3fs-public/ray.payys-wwii-memorial-at-night-national-mall_mydccool-homepage-06.02.jpg",
+    "title": "Ray pays WWII Memorial at Night",
+    "blurb": "Secret Bar with cool specs.",
+    "author": "Will",
+    "longitude": 42,
+    "latitude": 89
+  },
+  {
+    "photo_url": "http://stationstart.com/wp-content/uploads/2010/05/cp_nc_bg_001-a.jpg",
+    "title": "Bishop's Garden",
+    "blurb": "The Bishop's Garden: Pilgrim Rd Washington, DC 20016",
+    "author": "Ebenezer",
+    "longitude": 192,
+    "latitude": 89
+  },
+  {
+    "photo_url": "https://assets3.thrillist.com/v1/image/1324028/size/tmg-slideshow_l.jpg",
+    "title": "Colorful Building",
+    "blurb": "This building will change colors in time.",
+    "author": "Lindsey",
+    "longitude": 123 ,
+    "latitude": 12
+  }
+
+
+]
