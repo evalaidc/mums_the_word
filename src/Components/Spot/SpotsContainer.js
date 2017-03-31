@@ -5,7 +5,9 @@ import React, {Component} from 'react'
 class SpotsContainer extends Component {
   render(){
     return(
-
+      <h1> Spots Container </h1>
     )
   }
 }
+
+export default SpotsContainer
