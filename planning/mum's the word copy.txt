@@ -1,0 +1,24 @@
+Project 4:
+potential names
+mum’s the word
+
+motivation - Going on a new adventure. Let’s explore something new but secret.
+share the place that you love with others.
+
+Spot
+spots that are fun and secret places to visit.
+ex: hiking spots with a fabulous view - included pic
+Location:
+little blurb about why it’s cool
+Author
+
+MVP - all locations on one page with a map. when clicking on the pin,
+ 	the picture appears
+Silver - deletes after a certain amount of days
+Gold - user auth - to restrict deleting certain posts
+
+
+User stories:
+
+The user should be able to create a new spot/pin where they can access a new page
+ that will give them specifics of the area. or a popup with the area description.
