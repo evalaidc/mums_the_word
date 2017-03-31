@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect('mongodb://localhost/mums_the_word_db', () => {
+mongoose.connect('mongodb://localhost/mums_the_word_db', (err, res) => {
   if(err){
     console.log(err)
   } else {
@@ -10,4 +10,4 @@ mongoose.connect('mongodb://localhost/mums_the_word_db', () => {
 
 const db = mongoose.connection
 
-modules.exports = mongoose
+module.exports = mongoose
