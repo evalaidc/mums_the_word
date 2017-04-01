@@ -6,8 +6,8 @@ class App extends Component {
   render() {
     return (
       <SpotsContainer
-      url='http://localhost:3101/api/spots'
-      pollInterval={2000}
+      url='http://127.0.0.1:3101/api/spots'
+      interval={2000}
       />
     );
   }
