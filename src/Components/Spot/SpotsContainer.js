@@ -27,23 +27,11 @@ class SpotsContainer extends Component {
    })
   };
 
-  componentWillReceiveProps(nextProps){
-
-  }
 
   render(){
-    let locations = this.state.data.map((spot, index) => {
-      return (
-        <div key={index}>
-        <h3> {spot.title} </h3>
-        </div>
-      )
-    })
-    console.log(this.state.data[1])
     return(
       <div>
       <h1> Spots Container </h1>
-      {locations}
       <SpotList spots={this.state.data} />
       </div>
     )
