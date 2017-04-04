@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import SpotList from './SpotList.js'
 import axios from 'axios'
+import Map from '../Map/Map.js'
 
 class SpotsContainer extends Component {
   constructor(props){
@@ -33,6 +34,7 @@ class SpotsContainer extends Component {
       <div>
       <h1> Spots Container </h1>
       <SpotList spots={this.state.data} />
+      <Map />
       </div>
     )
   }
