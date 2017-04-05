@@ -1,21 +1,24 @@
 import React, {Component} from 'react'
 import SpotList from './SpotList.js'
 import axios from 'axios'
+import {
+  Route
+} from 'react-router-dom'
+import NewSpotForm from '../Spot/NewSpotForm.js'
+import '../css/spotcontainer.css'
 
 class SpotsContainer extends Component {
   constructor(props){
     super(props)
     this.state = {
-      data: [],
-      lat: -34.397,
-      lng: 150.644
+      data: []
     }
     this.loadSpotsFromAPI = this.loadSpotsFromAPI.bind(this);
   }
 
   componentDidMount() {
    this.loadSpotsFromAPI();
-  //  setInterval(this.loadSpotsFromAPI(), this.props.interval);
+   setInterval(this.loadSpotsFromAPI(), this.props.interval);
    }
 
   loadSpotsFromAPI() {
@@ -30,10 +33,18 @@ class SpotsContainer extends Component {
   };
 
 
+
   render(){
     return(
-      <div>
-      <h1> Spots Container </h1>
+      <div className='spotContainer'>
+      <Route
+        path="/Home/NewForm"
+        render={() => {
+          return (
+            <NewSpotForm />
+            )
+          }}
+      />
       <SpotList spots={this.state.data} />
       </div>
     )

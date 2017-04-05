@@ -1,21 +1,30 @@
 import React, {Component} from 'react';
-import Spot from './Spot.js'
+import {
+  Link
+} from 'react-router-dom'
+import '../css/spotlist.css'
 
 class SpotList extends Component {
 
   render(){
     let locations = this.props.spots.map((spot, index) => {
+      let pathname = `/spots/${spot.title}`
       return (
         <div key={index}>
-        <h3> {spot.title} </h3>
-        <Spot title={spot.title} blurb={spot.blurb} author={spot.author} lat={spot.latitude} lng={spot.longitude} />
+        <Link to={
+          {pathname: pathname ,
+            state: {selectedSpot: spot}
+          }
+        }>
+          <div className='imagelist'><img src={spot.photo_url} alt={spot.title} /></div>
+        </Link>
         </div>
       )
     })
     return (
       <div>
-      <h1> SpotList </h1>
-        <div> {locations} </div>
+      <h1> Pick Your Next Adventure </h1>
+        <div className="locationList"> {locations} </div>
       </div>
     )
   }
