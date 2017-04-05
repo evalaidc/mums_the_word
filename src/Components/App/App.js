@@ -9,6 +9,7 @@ import {
   Link,
   Redirect
 } from 'react-router-dom'
+import GoogleMap from '../GMapAndMarkers/googlemap.js'
 
 class App extends Component {
   constructor(props){
@@ -24,11 +25,6 @@ class App extends Component {
     }
   }
 
-
-
-
-
-
   render() {
     return (
       <Router>
@@ -37,6 +33,7 @@ class App extends Component {
             <Link to="/Home"> Home </Link>
             <Link to="/About"> About </Link>
             <Link to="/Home/NewForm"> Make a New Mark </Link>
+            <Link to="/Map"> Map </Link>
           </nav>
           <main>
             <Route
@@ -59,12 +56,17 @@ class App extends Component {
               component={About}
             />
             <Route
+              path="/Map"
+              render={() => {
+                return <GoogleMap />
+              }}
+            />
+            <Route
                 path='/*'
                   render={ () => {
                     return <Redirect to='/Home' />
                   }}
               />
-
           </main>
         </div>
       </Router>
