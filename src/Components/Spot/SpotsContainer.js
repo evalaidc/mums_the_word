@@ -1,14 +1,14 @@
 import React, {Component} from 'react'
 import SpotList from './SpotList.js'
 import axios from 'axios'
-// import MapContainer from '../Map/MapContainer.js'
-import GoogleMap from '../Map/google_map.js'
 
 class SpotsContainer extends Component {
   constructor(props){
     super(props)
     this.state = {
-      data: []
+      data: [],
+      lat: -34.397,
+      lng: 150.644
     }
     this.loadSpotsFromAPI = this.loadSpotsFromAPI.bind(this);
   }
@@ -25,7 +25,7 @@ class SpotsContainer extends Component {
         data: res.data
       })
     }).catch(err => {
-      console.log(' api request failed')
+      console.log('api request failed')
    })
   };
 
@@ -35,7 +35,6 @@ class SpotsContainer extends Component {
       <div>
       <h1> Spots Container </h1>
       <SpotList spots={this.state.data} />
-      <GoogleMap lat={-34.397} lng={150.644}/>
       </div>
     )
   }

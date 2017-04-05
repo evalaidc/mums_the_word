@@ -19,10 +19,10 @@ const InitialMap = withGoogleMap(props => {
       >
     this.props.markers.map((marker, index) =>  {
     <Marker
-      key={index}
-      position={marker.position}
+      // key={index}
+      position={{lat: 40.33, lng: 23.43}}
       onClick={() => props.onMarkerClick(marker)}
-    />
+    ></Marker>
   })
     </GoogleMap>
   )

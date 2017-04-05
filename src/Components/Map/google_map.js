@@ -8,6 +8,11 @@ export default class GoogleMap extends Component {
     return false
   }
 
+  // allows us to update/ migrate from one set of props to another one
+  componentWillReceiveProps(nextProps){
+
+  }
+
   componentDidMount(){
     // 2nd parameter - custimzation of how the map works
     // 1st param - tells google map to attempt to render itself to the div that

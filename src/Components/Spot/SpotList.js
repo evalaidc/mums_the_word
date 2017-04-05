@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Spot from './Spot.js'
 
 class SpotList extends Component {
 
@@ -7,6 +8,7 @@ class SpotList extends Component {
       return (
         <div key={index}>
         <h3> {spot.title} </h3>
+        <Spot title={spot.title} blurb={spot.blurb} author={spot.author} lat={spot.latitude} lng={spot.longitude} />
         </div>
       )
     })
