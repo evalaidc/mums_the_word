@@ -23,7 +23,6 @@ class SpotsContainer extends Component {
 
   loadSpotsFromAPI() {
     axios.get(this.props.url).then(res => {
-      // console.log(res)
       this.setState({
         data: res.data
       })

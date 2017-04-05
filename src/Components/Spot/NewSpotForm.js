@@ -59,9 +59,6 @@ class NewSpotForm extends Component {
     let longitude = this.state.longitude;
     let latitude = this.state.latitude;
 
-    // if (!blurb || !author || !title || !photo_url || !longitude || !latitude) {
-    //   return;
-    // }
     axios.post("http://localhost:3101/api/spots/new", {title, blurb, author, photo_url, longitude, latitude})
     .then((res) => {
       this.setState({
@@ -79,16 +76,7 @@ class NewSpotForm extends Component {
     })
 
   }
-  //  this.props.addNewSpot({ author: author, blurb: blurb, photo_url: photo_url, title: title, longitude: longitude, latitude: latitude });
-  //  this.setState({
-  //    author: '',
-  //    blurb: '',
-  //    photo_url: '',
-  //    title: '',
-  //    longitude: 0,
-  //    latitude: 0
-  //   });
-  //   }
+
 
 
   render(){
@@ -100,6 +88,7 @@ class NewSpotForm extends Component {
           <br />
           <input type="text" placeholder="Blurb" value={ this.state.blurb } onChange={(e) => this.setNewSpotBlurb(e)}/>
           <br />
+          <p> Upload your own image <a href='http://imgur.com/'>here</a> and copy the link into the space below </p>
           <input type="text" placeholder="Image Url" value={ this.state.photo_url } onChange={(e) => this.setNewSpotPhoto(e)}/>
           <br />
           <input type="text" placeholder="Author"  value={ this.state.author } onChange={(e) => this.setNewSpotAuthor(e)}/>
