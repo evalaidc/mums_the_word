@@ -1,7 +1,12 @@
 import {
+  default as React,
+  Component
+} from 'react'
+
+import {
   withGoogleMap,
   GoogleMap,
-  InfoWindow,
+  // InfoWindow,
   Marker
 } from 'react-google-maps'
 
@@ -12,16 +17,18 @@ const InitialMap = withGoogleMap(props => {
       defaultZoom={14}
       defaultCenter={{lat: 40.66, lng: -73.99}}
       >
+    this.props.markers.map((marker, index) =>  {
     <Marker
       key={index}
       position={marker.position}
       onClick={() => props.onMarkerClick(marker)}
     />
+  })
     </GoogleMap>
   )
 })
 
-
+export default InitialMap
 
 
 

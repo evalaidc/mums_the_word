@@ -1,34 +1,36 @@
 import React, {Component} from 'react'
 // import Map from './Map.js'
-import Map from 'google-maps-react'
+import InitialMap from './Map.js'
 
 export class MapContainer extends Component {
 
-  render(){
-    // if(!this.props.loaded){
-    //   return <div> Loading... </div>
-    //   }
-
-    // height and width of the map
-    const style = {
-      width: '100vw',
-      height: '100vh'
+    constructor(props){
+      super(props)
+      this.state={
+        markers: [{
+          position: {
+            lat: 25.111,
+            lng: 121.52
+          }
+        }]
+      }
     }
 
+  render(){
+
+
       return (
-        <div style={style}>
-        <Map google={this.props.google} zoom={14}>
-
-        <Marker onClick={this.onMarkerClick}
-          name={'Current location'} />
-
-        <InfoWindow onClose={this.onInfoWindowClose}>
-          <div>
-            <h1>{this.state.selectedPlace.name}</h1>
-          </div>
-          </InfoWindow>
-        </Map>
-        <div>
+        <div style={{height: "100%"}}>
+          <InitialMap
+            containerElement={
+              <div style={{height: "100%"}} />
+            }
+            mapElement={
+              <div style={{height: "100%"}} />
+            }
+            markers={this.state.markers}
+          />
+        </div>
       )
   }
 
