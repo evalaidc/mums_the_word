@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+
 class NewSpotForm extends Component {
   constructor(props) {
    super(props);
@@ -9,7 +10,8 @@ class NewSpotForm extends Component {
     photo_url: '',
     title: '',
     longitude: 0,
-    latitude: 0
+    latitude: 0,
+    hasPosted: false
    }
  }
 
@@ -51,7 +53,6 @@ class NewSpotForm extends Component {
      }
 
   addNewSpot(e) {
-    e.preventDefault();
     let author = this.state.author.trim();
     let blurb = this.state.blurb.trim();
     let title = this.state.title.trim();
@@ -59,17 +60,20 @@ class NewSpotForm extends Component {
     let longitude = this.state.longitude;
     let latitude = this.state.latitude;
 
+
     axios.post("http://localhost:3101/api/spots/new", {title, blurb, author, photo_url, longitude, latitude})
-    .then((res) => {
+    .then(res => {
+      console.log('created')
+
       this.setState({
         author: '',
         blurb: '',
         photo_url: '',
         title: '',
         longitude: 0,
-        latitude: 0
+        latitude: 0,
+        hasPosted: true
       })
-      this.props.reload()
     })
     .catch((err) => {
       console.log(err)
@@ -80,6 +84,7 @@ class NewSpotForm extends Component {
 
 
   render(){
+
     return(
       <div>
       <h2> Make Your Mark, By Creating A New Spot </h2>

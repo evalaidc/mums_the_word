@@ -32,7 +32,6 @@ class SpotsContainer extends Component {
   };
 
 
-
   render(){
     return(
       <div className='spotContainer'>
