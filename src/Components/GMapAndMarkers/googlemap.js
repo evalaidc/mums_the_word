@@ -1,7 +1,6 @@
 /* eslint-disable no-undef */
 import React, {Component} from 'react'
 import '../css/Map1.css'
-import axios from 'axios'
 
 export default class GoogleMap extends Component {
   constructor(props){
@@ -12,22 +11,11 @@ export default class GoogleMap extends Component {
   }
   // determines if component will rerender - if true it will
   shouldComponentUpdate(){
-    return true
+    return false
   }
 
-  // allows us to update/ migrate from one set of props to another one
-  componentWillReceiveProps(nextProps){
-
-  }
-// happens before component is mounted
   componentWillMount(){
-  //   axios.get(this.props.url).then(res => {
-  //     this.setState({
-  //       data: res.data
-  //     })
-  //   }).catch(err => {
-  //     console.log('api request failed')
-  //   })
+
   }
 
   componentDidMount(){
@@ -41,22 +29,62 @@ export default class GoogleMap extends Component {
       center: { lat: 38.907192, lng: -77.036871 },
       zoom: 14
     })
+    let markers = []
+    let infowindows = []
     // function to create markers
-    function addMarker(lati,long){
-      new google.maps.Marker({
+    function addMarker(lati,long,title){
+      var marker = new google.maps.Marker({
         position: {
           lat: lati,
           lng: long
         },
-        map: self.map
+        map: self.map,
+        title: title
+        // event: {
+        //   name: 'click',
+        //   callback: function(summary){
+        //     var infoWindow = new google.maps.InfoWindow({
+        //       content: summary
+        //     });
+        //   infoWindow.open(self.map, marker);
+
+        //   }
+        // }
 
       })
+      markers.push(marker)
     }
-    console.log(this.state.data)
+
+    //add infoWindow
+    function addInfoWindow(blurb){
+      var infowindow = new google.maps.InfoWindow({
+        content: blurb
+      })
+      infowindows.push(infowindow)
+      console.log(infowindows)
+
+    }
     // adding all markers using long and lats from data
     this.state.data.map((spot, index) => {
-      addMarker(spot.latitude, spot.longitude)
+      addMarker(spot.latitude, spot.longitude, spot.title)
+      addInfoWindow(spot.blurb)
+
+        markers[index].addListener('click', function(){
+          infowindows[index].open(self.map, markers[index])
+        })
     })
+    // .then( () => {
+    //     for( var i = 0; i < markers.length; i++){
+    //       markers[i].addListener('click', function(){
+    //         infowindows[i].open(map, markers[i])
+    //       })
+    //     }
+    //   }
+    // )
+    // marker.addListener('click', function() {
+    //   infoWindow.open(map, marker);
+    // });
+
 
   }
 

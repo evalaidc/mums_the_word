@@ -45,6 +45,7 @@ class SpotsContainer extends Component {
               )
             }}
         />
+        <h1> Go Ahead And Explore </h1>
         <Route
           path="/Home/Map"
           render={() => {
