@@ -6,6 +6,8 @@ import {
 } from 'react-router-dom'
 import NewSpotForm from '../Spot/NewSpotForm.js'
 import '../css/spotcontainer.css'
+import GoogleMap from '../GMapAndMarkers/googlemap.js'
+
 
 class SpotsContainer extends Component {
   constructor(props){
@@ -35,15 +37,22 @@ class SpotsContainer extends Component {
   render(){
     return(
       <div className='spotContainer'>
-      <Route
-        path="/Home/NewForm"
-        render={() => {
-          return (
-            <NewSpotForm />
+        <Route
+          path="/Home/NewForm"
+          render={() => {
+            return (
+              <NewSpotForm />
+              )
+            }}
+        />
+        <Route
+          path="/Home/Map"
+          render={() => {
+            return (
+              <GoogleMap spots={this.state.data}/>
             )
           }}
-      />
-      <SpotList spots={this.state.data} />
+        />
       </div>
     )
   }

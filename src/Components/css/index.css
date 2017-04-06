@@ -4,12 +4,3 @@ body {
   font-family: sans-serif;
   width: 100%;
 }
-.map {
-  height: 300px;
-}
-
-@media screen and (min-width: 1024px){
-    .map {
-        height: 500px;
-    }
-}
