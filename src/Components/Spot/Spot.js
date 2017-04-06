@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import GoogleMap from '../Map/google_map.js'
 import axios from 'axios'
+import '../css/spot.css'
 
 class Spot extends Component {
   constructor(props){
@@ -25,15 +26,18 @@ class Spot extends Component {
 
   render(){
     return(
-      <div>
-      <h1> {this.state.selectedSpot.title} </h1>
-      <h3> Posted By: {this.state.selectedSpot.author}</h3>
-      <p> Address: {this.state.selectedSpot.address}</p>
-      <p> {this.state.selectedSpot.blurb}</p>
-      <button onClick={(e) => {this.handleSpotDelete(e)}}> Delete </button>
-      <p />
-      <br />
-      <GoogleMap lat={this.state.selectedSpot.latitude} lng={this.state.selectedSpot.longitude}/>
+      <div className='spot'>
+        <div className='spotDets'>
+          <h1> {this.state.selectedSpot.title} </h1>
+          <h3> Posted By: {this.state.selectedSpot.author}</h3>
+            <p> Address: {this.state.selectedSpot.address}</p>
+            <p> {this.state.selectedSpot.blurb}</p>
+            <button onClick={(e) => {this.handleSpotDelete(e)}}> Delete </button>
+          <br />
+        </div>
+        <div className='indivMap'>
+          <GoogleMap lat={this.state.selectedSpot.latitude} lng={this.state.selectedSpot.longitude}/>
+        </div>
       </div>
     )
   }

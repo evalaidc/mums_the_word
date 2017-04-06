@@ -1,16 +1,8 @@
-/*img {
-  height: 100%;
-  width: 100%;
+.listHeading{
+  background-color: rgba(101,115,126,.6);
+  margin: 20px 20%;
+  padding: 10px;
 }
-.imagelist {
-  height: 300px;
-  width: 400px;
-}
-.locationList {
-  display: block;
-  justify-content: space-around;
-  margin: 0 auto
-}*/
 
 h2 {
   width: auto;

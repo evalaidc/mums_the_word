@@ -1,7 +1,7 @@
-#SingMap {
+.SingMap {
   margin-top:-20px;
-  height: 300px;
-  width: 300px;
-  z-index: -1;
-  position: absolute;
+  height: 500px;
+  width: 100%;
+  z-index: 1;
+  position: relative;
 }

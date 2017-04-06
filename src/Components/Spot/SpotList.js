@@ -23,7 +23,7 @@ class SpotList extends Component {
     })
     return (
       <div>
-      <h1> Pick Your Next Adventure </h1>
+      <div className="listHeading"><h1> Pick Your Next Adventure </h1></div>
         <div className="locationList"> {locations} </div>
       </div>
     )

@@ -1,0 +1,20 @@
+.spot{
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.spotDets{
+  background-color: rgba(101,115,126,.6);
+  padding: 3px 10px;
+  margin: 5px 0;
+}
+.indivMap{
+  margin: 30px 10px;
+
+}
+
+h1,h3,p {
+  color: white;
+}

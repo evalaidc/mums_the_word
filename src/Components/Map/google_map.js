@@ -28,7 +28,7 @@ export default class GoogleMap extends Component {
   render(){
     // ref system used to reference a direct DOM element
     return (
-      <div id='SingMap' ref='singlemap' />
+      <div className='SingMap' ref='singlemap' />
     )
   }
 }

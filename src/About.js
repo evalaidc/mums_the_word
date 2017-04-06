@@ -1,10 +1,11 @@
 import React, {Component} from 'react'
+import './Components/css/About.css'
 
 class About extends Component {
 
   render(){
     return(
-      <div>
+      <div className="AboutContainer">
         <h1> The Motivation </h1>
         <p> The page was created with the intention to let others know about fun places that you admire.
           Whether it be quirky or strange or just special to you.

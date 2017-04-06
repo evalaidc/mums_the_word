@@ -1,0 +1,18 @@
+h1 {
+  width: 500px;
+  margin: 10px auto;
+  font-size: 40px;
+}
+
+p {
+  width: 100%;
+  font-size: 24px;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.AboutContainer{
+  background-color: rgba(101,115,126,.6);
+  margin: 20px;
+  width: 65%;
+}
