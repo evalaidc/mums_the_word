@@ -45,6 +45,7 @@ router.post("/spots/new", function(req, res){
     author: req.body.author,
     blurb: req.body.blurb,
     photo_url: req.body.photo_url,
+    address: req.body.address,
     longitude: req.body.longitude,
     latitude: req.body.latitude
   })

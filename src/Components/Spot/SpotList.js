@@ -10,13 +10,13 @@ class SpotList extends Component {
     let locations = this.props.spots.map((spot, index) => {
       let pathname = `/spots/${spot.title}`
       return (
-        <div key={index}>
+        <div className="ListImgs" key={index}>
         <Link to={
           {pathname: pathname ,
             state: {selectedSpot: spot}
           }
         }>
-          <h3>{spot.title}</h3>
+         <img src={spot.photo_url} alt={spot.title} />
         </Link>
         </div>
       )

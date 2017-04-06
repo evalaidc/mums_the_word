@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios'
+import '../css/form.css'
 
 class NewSpotForm extends Component {
   constructor(props) {
@@ -11,8 +12,7 @@ class NewSpotForm extends Component {
     title: '',
     address: '',
     longitude: 0,
-    latitude: 0,
-    hasPosted: false
+    latitude: 0
    }
  }
 
@@ -35,7 +35,7 @@ class NewSpotForm extends Component {
        })
      }
 
-     setNewSpotAadress(e){
+     setNewSpotAddress(e){
        this.setState({
          address: e.target.value
        })
@@ -80,8 +80,7 @@ class NewSpotForm extends Component {
         title: '',
         address: '',
         longitude: 0,
-        latitude: 0,
-        hasPosted: true
+        latitude: 0
       })
     })
     .catch((err) => {
@@ -95,25 +94,26 @@ class NewSpotForm extends Component {
   render(){
 
     return(
-      <div>
+      <div className='createForm'>
       <h2> Make Your Mark, By Creating A New Spot </h2>
         <form onSubmit={(e) => {this.addNewSpot(e)}}>
           <input type="text" placeholder="Title" value={ this.state.title } onChange={(e) => this.setNewSpotTitle(e)}/>
           <br />
           <input type="text" placeholder="Blurb" value={ this.state.blurb } onChange={(e) => this.setNewSpotBlurb(e)}/>
           <br />
-          <p> Upload your own image <a href='http://imgur.com/'>here</a> and copy the link into the space below </p>
+          <a href='http://imgur.com/' target="_blank">Upload your own image here.</a> | <a href="http://www.wikihow.com/Get-the-URL-for-Pictures" target="_blank">Here is the "How" </a>
+          <br />
           <input type="text" placeholder="Image Url" value={ this.state.photo_url } onChange={(e) => this.setNewSpotPhoto(e)}/>
           <br />
           <input type="text" placeholder="Author"  value={ this.state.author } onChange={(e) => this.setNewSpotAuthor(e)}/>
           <br />
           <input type="text" placeholder="Address"  value={ this.state.address } onChange={(e) => this.setNewSpotAddress(e)}/>
           <br />
-          <a href='http://www.latlong.net/'> Find Longitude </a>
+          <a href='http://www.latlong.net/' target="_blank"> Find Longitude </a>
           <br />
           <input type="number" step="any" value={ this.state.longitude } placeholder="Longitude" onChange={(e) => this.setNewSpotLongitude(e)}/>
           <br />
-          <a href='http://www.latlong.net/'> Find Latitude </a>
+          <a href='http://www.latlong.net/' target="_blank"> Find Latitude </a>
           <br />
           <input type="number" step="any" value={ this.state.latitude } placeholder="Latitude" onChange={(e) => this.setNewSpotLatitude(e)}/>
           <br />

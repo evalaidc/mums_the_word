@@ -31,6 +31,7 @@ class Spot extends Component {
       <p> Address: {this.state.selectedSpot.address}</p>
       <p> {this.state.selectedSpot.blurb}</p>
       <button onClick={(e) => {this.handleSpotDelete(e)}}> Delete </button>
+      <p />
       <br />
       <GoogleMap lat={this.state.selectedSpot.latitude} lng={this.state.selectedSpot.longitude}/>
       </div>

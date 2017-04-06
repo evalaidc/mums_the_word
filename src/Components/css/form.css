@@ -1,0 +1,24 @@
+a {
+  color: white;
+  text-decoration: none;
+}
+form > a:hover{
+  background-color: black;
+}
+p> a:hover {
+  background-color: black;
+}
+h2, p{
+  color: black;
+}
+
+.createForm{
+  background-color: rgba(101,115,126,.6);
+  width: 500px;
+  margin: 0 auto;
+}
+
+input {
+  width: 300px;
+  text-align: center;
+}

@@ -12,9 +12,27 @@
   margin: 0 auto
 }*/
 
-h3 {
+h2 {
   width: auto;
   height: auto;
   margin: 5px auto;
   padding: 5px 5px;
+  color: black;
+}
+
+.ListImgs{
+  width: 400px;
+  height: 300px;
+  margin: 10px 5px;
+}
+img{
+  height: 100%;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.locationList{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }

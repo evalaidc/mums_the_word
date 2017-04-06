@@ -1,9 +1,9 @@
 /* eslint-disable no-undef */
+/* eslint-disable no-useless-concat */
+/* eslint-disable array-callback-return */
+
 import React, {Component} from 'react'
 import '../css/Map1.css'
-import {
-  Link
-} from 'react-router-dom'
 
 export default class GoogleMap extends Component {
   constructor(props){
@@ -14,7 +14,7 @@ export default class GoogleMap extends Component {
   }
   // determines if component will rerender - if true it will
   shouldComponentUpdate(){
-    return true
+    return false
   }
 
 

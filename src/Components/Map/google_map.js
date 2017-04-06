@@ -19,7 +19,7 @@ export default class GoogleMap extends Component {
       //has the ref.
         // create new google map and insert it into that div
             // save ref as this.map
-    this.map = new google.maps.Map(this.refs.map , {
+    this.map = new google.maps.Map(this.refs.singlemap , {
       center: { lat: this.props.lat, lng: this.props.lng },
       zoom: 8
     })
@@ -28,7 +28,7 @@ export default class GoogleMap extends Component {
   render(){
     // ref system used to reference a direct DOM element
     return (
-      <div id='map' ref='map' />
+      <div id='SingMap' ref='singlemap' />
     )
   }
 }
