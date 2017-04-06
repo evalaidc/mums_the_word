@@ -19,20 +19,26 @@ export default class GoogleMap extends Component {
       //has the ref.
         // create new google map and insert it into that div
             // save ref as this.map
-    this.map = new google.maps.Map(this.refs.map , {
+            let self = this
+    self.map = new google.maps.Map(this.refs.map , {
       center: { lat: 38.907192, lng: -77.036871 },
       zoom: 14
     })
 
-    // creating markers
-    var marker = new google.maps.Marker({
-      position: {
-        lat: 38.907192,
-        lng: -77.036871
-      },
-      map: this.map
+    // function to create markers
+    function addMarker(lati,long){
+      var marker = new google.maps.Marker({
+        position: {
+          lat: lati,
+          lng: long
+        },
+        map: self.map
 
-    })
+      })
+    }
+
+    addMarker(38.907192, -77.036871)
+
   }
 
   render(){
