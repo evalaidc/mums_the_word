@@ -16,7 +16,7 @@ class SpotList extends Component {
             state: {selectedSpot: spot}
           }
         }>
-          <div className='imagelist'><img src={spot.photo_url} alt={spot.title} /></div>
+          <h3>{spot.title}</h3>
         </Link>
         </div>
       )

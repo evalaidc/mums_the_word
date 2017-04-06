@@ -1,6 +1,9 @@
 /* eslint-disable no-undef */
 import React, {Component} from 'react'
 import '../css/Map1.css'
+import {
+  Link
+} from 'react-router-dom'
 
 export default class GoogleMap extends Component {
   constructor(props){
@@ -11,12 +14,9 @@ export default class GoogleMap extends Component {
   }
   // determines if component will rerender - if true it will
   shouldComponentUpdate(){
-    return false
+    return true
   }
 
-  componentWillMount(){
-
-  }
 
   componentDidMount(){
     // 2nd parameter - custimzation of how the map works
@@ -40,58 +40,44 @@ export default class GoogleMap extends Component {
         },
         map: self.map,
         title: title
-        // event: {
-        //   name: 'click',
-        //   callback: function(summary){
-        //     var infoWindow = new google.maps.InfoWindow({
-        //       content: summary
-        //     });
-        //   infoWindow.open(self.map, marker);
-
-        //   }
-        // }
 
       })
       markers.push(marker)
     }
 
     //add infoWindow
-    function addInfoWindow(blurb){
+    function addInfoWindow(spot, title, blurb, photo, author, address){
       var infowindow = new google.maps.InfoWindow({
-        content: blurb
+        content: (
+          '<h2>' + `${title}` + '</h2>' + '<br />' +
+          '<img src=' + `"${photo}"` + 'alt=' + `"${title}"` + '/>' +'<br />' +
+           'Posted By: ' + `${author}` + '<br />' +
+           'Address: ' + `${address}`
+           + '<br />' + `${blurb}`
+
+        )
       })
       infowindows.push(infowindow)
-      console.log(infowindows)
 
     }
     // adding all markers using long and lats from data
     this.state.data.map((spot, index) => {
       addMarker(spot.latitude, spot.longitude, spot.title)
-      addInfoWindow(spot.blurb)
+      addInfoWindow(spot, spot.title, spot.blurb, spot.photo_url, spot.author ,spot.address)
 
         markers[index].addListener('click', function(){
           infowindows[index].open(self.map, markers[index])
         })
     })
-    // .then( () => {
-    //     for( var i = 0; i < markers.length; i++){
-    //       markers[i].addListener('click', function(){
-    //         infowindows[i].open(map, markers[i])
-    //       })
-    //     }
-    //   }
-    // )
-    // marker.addListener('click', function() {
-    //   infoWindow.open(map, marker);
-    // });
-
 
   }
 
   render(){
     // ref system used to reference a direct DOM element
     return (
+      <div className="mapContainer">
       <div id='map' ref='map' />
+      </div>
     )
   }
 }

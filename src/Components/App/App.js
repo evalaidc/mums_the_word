@@ -29,10 +29,14 @@ class App extends Component {
       <Router>
         <div>
           <nav>
-            <Link to="/Home"> Home </Link>
+            <div className="links">
             <Link to="/About"> About </Link>
-            <Link to="/Home/NewForm"> Make a New Mark </Link>
+            <Link to="/Home"> List Spots </Link>
+            </div>
+            <div className="links">
             <Link to="/Home/Map"> Map </Link>
+            <Link to="/Home/NewForm"> Make a New Mark </Link>
+            </div>
           </nav>
           <main>
             <Route

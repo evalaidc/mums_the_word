@@ -1,0 +1,31 @@
+body{
+  width: auto;
+  height: 800px;
+}
+main {
+  width: auto;
+  height: auto;
+  margin: 5px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+nav {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.links {
+  height: 50px;
+  display: flex;
+  align-items: center;
+}
+.links > a {
+  height: 20px;
+  width: 150px;
+  font-size: 18px;
+  margin: 5px 5px;
+  padding: 10px;
+  text-align: center;
+  z-index: 1;
+}

@@ -11,3 +11,10 @@
   justify-content: space-around;
   margin: 0 auto
 }*/
+
+h3 {
+  width: auto;
+  height: auto;
+  margin: 5px auto;
+  padding: 5px 5px;
+}

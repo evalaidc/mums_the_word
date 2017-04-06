@@ -28,6 +28,7 @@ class Spot extends Component {
       <div>
       <h1> {this.state.selectedSpot.title} </h1>
       <h3> Posted By: {this.state.selectedSpot.author}</h3>
+      <p> Address: {this.state.selectedSpot.address}</p>
       <p> {this.state.selectedSpot.blurb}</p>
       <button onClick={(e) => {this.handleSpotDelete(e)}}> Delete </button>
       <br />

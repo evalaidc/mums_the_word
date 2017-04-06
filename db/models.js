@@ -6,6 +6,7 @@ const SpotSchema = new mongoose.Schema ({
   title: String,
   blurb: String,
   author: String,
+  address: String,
   longitude: Number,
   latitude: Number
 }, {

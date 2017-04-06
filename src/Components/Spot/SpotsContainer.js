@@ -37,6 +37,15 @@ class SpotsContainer extends Component {
   render(){
     return(
       <div className='spotContainer'>
+      <Route
+        exact path="/Home/Map"
+        render={() => {
+          return (
+            <GoogleMap spots={this.state.data}/>
+          )
+        }}
+      />
+
         <Route
           path="/Home/NewForm"
           render={() => {
@@ -45,15 +54,7 @@ class SpotsContainer extends Component {
               )
             }}
         />
-        <h1> Go Ahead And Explore </h1>
-        <Route
-          path="/Home/Map"
-          render={() => {
-            return (
-              <GoogleMap spots={this.state.data}/>
-            )
-          }}
-        />
+        <SpotList spots={this.state.data}/>
       </div>
     )
   }

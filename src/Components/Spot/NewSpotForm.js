@@ -9,6 +9,7 @@ class NewSpotForm extends Component {
     blurb: '',
     photo_url: '',
     title: '',
+    address: '',
     longitude: 0,
     latitude: 0,
     hasPosted: false
@@ -31,6 +32,12 @@ class NewSpotForm extends Component {
      setNewSpotAuthor(e){
        this.setState({
          author: e.target.value
+       })
+     }
+
+     setNewSpotAadress(e){
+       this.setState({
+         address: e.target.value
        })
      }
 
@@ -57,11 +64,12 @@ class NewSpotForm extends Component {
     let blurb = this.state.blurb.trim();
     let title = this.state.title.trim();
     let photo_url = this.state.photo_url.trim();
+    let address = this.state.address.trim();
     let longitude = this.state.longitude;
     let latitude = this.state.latitude;
 
 
-    axios.post("http://localhost:3101/api/spots/new", {title, blurb, author, photo_url, longitude, latitude})
+    axios.post("http://localhost:3101/api/spots/new", {title, blurb, author, photo_url, address, longitude, latitude})
     .then(res => {
       console.log('created')
 
@@ -70,6 +78,7 @@ class NewSpotForm extends Component {
         blurb: '',
         photo_url: '',
         title: '',
+        address: '',
         longitude: 0,
         latitude: 0,
         hasPosted: true
@@ -97,6 +106,8 @@ class NewSpotForm extends Component {
           <input type="text" placeholder="Image Url" value={ this.state.photo_url } onChange={(e) => this.setNewSpotPhoto(e)}/>
           <br />
           <input type="text" placeholder="Author"  value={ this.state.author } onChange={(e) => this.setNewSpotAuthor(e)}/>
+          <br />
+          <input type="text" placeholder="Address"  value={ this.state.address } onChange={(e) => this.setNewSpotAddress(e)}/>
           <br />
           <a href='http://www.latlong.net/'> Find Longitude </a>
           <br />

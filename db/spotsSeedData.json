@@ -4,6 +4,7 @@
     "title": "Blue Bar",
     "blurb": "Blue Bar is a secret location only those who are really searching will find.",
     "author": "Eric",
+    "address": "125 Miller St.",
     "longitude": 23 ,
     "latitude": 47
   },
@@ -12,6 +13,7 @@
     "title": "Ray pays WWII Memorial at Night",
     "blurb": "Secret Bar with cool specs.",
     "author": "Will",
+    "address": "123 Miller St.",
     "longitude": -112.024505,
     "latitude": 46.588371
   },
@@ -20,6 +22,7 @@
     "title": "Bishop's Garden",
     "blurb": "The Bishop's Garden: Pilgrim Rd Washington, DC 20016",
     "author": "Ebenezer",
+    "address": "984 Fallow Lane",
     "longitude": -114.433594,
     "latitude": 39.095963
   },
@@ -28,6 +31,7 @@
     "title": "Colorful Building",
     "blurb": "This building will change colors in time.",
     "author": "Lindsey",
+    "address": "awesome street",
     "longitude": 33 ,
     "latitude": 12
   }

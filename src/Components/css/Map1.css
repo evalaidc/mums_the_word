@@ -1,7 +1,12 @@
 #map {
   margin-top:-20px;
-  height: 80%;
-  width: 80%;
-  z-index: -1;
+  height: 90%;
+  width: 100%;
+  z-index: 0;
   position: absolute;
+  top: 9%;
+}
+
+img {
+  height: 300px;
 }
