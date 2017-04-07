@@ -13,16 +13,8 @@ import {
 class App extends Component {
   constructor(props){
     super(props)
-    this.state={
-      newTitle: '',
-      newBlurb: '',
-      newAuthor: '',
-      newPhotoUrl: '',
-      newLongitude: 0,
-      newLatitude: 0
 
     }
-  }
 
   render() {
     return (
@@ -30,16 +22,22 @@ class App extends Component {
         <div>
           <nav>
             <div className="links">
-            <Link to="/About"> About </Link>
+            <Link to="/"> About </Link>
             <Link to="/Home"> List Spots </Link>
             </div>
-            <div id="iconimage"></div>
+            <Link to='/Home'>
+              <div id="iconimage"></div>
+            </Link>
             <div className="links">
             <Link to="/Home/NewForm"> Make a New Mark </Link>
             <Link to="/Home/Map"> Map </Link>
             </div>
           </nav>
           <main>
+            <Route
+              exact path="/"
+              component={About}
+            />
             <Route
               path='/Home'
               render={() => {
@@ -54,10 +52,6 @@ class App extends Component {
             <Route
               path="/spots/:title"
               component={Spot}
-            />
-            <Route
-              path="/About"
-              component={About}
             />
             <Route
                 path='/*'

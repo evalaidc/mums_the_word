@@ -63,7 +63,6 @@ nav {
   height:50px;
   z-index: 3;
   background-size: cover;
-  background-color: red;
   position: relative;
   margin: auto;
   transition: all .2s ease-in-out;
