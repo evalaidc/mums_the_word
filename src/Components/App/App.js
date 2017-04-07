@@ -45,7 +45,7 @@ class App extends Component {
               render={() => {
                 return (
                   <SpotsContainer
-                  url='http://127.0.0.1:3101/api/spots'
+                  url='api/spots'
                   interval={2000}
                   />
                 )

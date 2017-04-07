@@ -19,7 +19,7 @@ app.use(function(req, res, next) {
 
 app.set('view engine', 'react')
 
-app.set("port", process.env.PORT || 3001)
+app.set("port", process.env.MONGOLAB_URI || 3001)
 app.use("/assets", express.static("public"))
 app.use(parser.urlencoded({extended: true}))
 app.use(parser.json())
