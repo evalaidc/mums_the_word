@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-import GoogleMap from '../Map/google_map.js'
+import GoogleMap from '../Map/SmallMap.js'
 import axios from 'axios'
 import '../css/spot.css'
 

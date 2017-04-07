@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
 import React, {Component} from 'react'
-import '../css/Map.css'
+import '../css/SmallMap.css'
 
 export default class GoogleMap extends Component {
   // determines if component will rerender - if true it will

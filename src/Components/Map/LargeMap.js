@@ -3,7 +3,7 @@
 /* eslint-disable array-callback-return */
 
 import React, {Component} from 'react'
-import '../css/Map1.css'
+import '../css/LargeMap.css'
 
 export default class GoogleMap extends Component {
   constructor(props){

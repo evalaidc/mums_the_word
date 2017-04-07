@@ -16,8 +16,11 @@ h2, p{
   background-color: rgba(101,115,126,.6);
   width: 500px;
   margin: 0 auto;
+  color: white;
 }
-
+#createformheader{
+  color: white;
+}
 input {
   width: 300px;
   height: 30px;

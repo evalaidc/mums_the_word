@@ -6,7 +6,7 @@ import {
 } from 'react-router-dom'
 import NewSpotForm from '../Spot/NewSpotForm.js'
 import '../css/spotcontainer.css'
-import GoogleMap from '../GMapAndMarkers/googlemap.js'
+import GoogleMap from '../Map/LargeMap.js'
 
 
 class SpotsContainer extends Component {

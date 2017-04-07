@@ -95,13 +95,13 @@ class NewSpotForm extends Component {
 
     return(
       <div className='createForm'>
-      <h2> Make Your Mark, By Creating A New Spot </h2>
+      <h2 id="createformheader"> Make Your Mark, By Creating A New Spot </h2>
         <form onSubmit={(e) => {this.addNewSpot(e)}}>
           <input type="text" placeholder="Title" value={ this.state.title } onChange={(e) => this.setNewSpotTitle(e)}/>
           <br />
           <input type="text" placeholder="Summary" value={ this.state.blurb } onChange={(e) => this.setNewSpotBlurb(e)}/>
           <br />
-          <a href="http://www.wikihow.com/Get-the-URL-for-Pictures" target="_blank">What`s an Image URL? </a> | <a href='http://imgur.com/' target="_blank">Upload your own image here.</a> 
+          <a href="http://www.wikihow.com/Get-the-URL-for-Pictures" target="_blank">What is an Image URL? </a> | <a href="http://imgur.com/" target="_blank">Upload your own image here.</a>
           <br />
           <input type="text" placeholder="Image Url" value={ this.state.photo_url } onChange={(e) => this.setNewSpotPhoto(e)}/>
           <br />
@@ -119,6 +119,7 @@ class NewSpotForm extends Component {
           <br />
           <button type="submit">Add Spot</button>
         </form>
+        <p> Need Some Inspiration? Check out Some Below.</p>
       </div>
     )
   }
