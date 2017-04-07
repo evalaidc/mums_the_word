@@ -1,11 +1,10 @@
 #map {
-  margin-top:-20px;
-  height: 95%;
+  top:50px;
+  height: 100%;
   width: 101%;
   left: -2px;
   z-index: 0;
   position: absolute;
-  top: 9%;
 }
 
 img {

@@ -15,4 +15,11 @@ p {
   background-color: rgba(101,115,126,.6);
   margin: 20px;
   width: 65%;
+  height: auto;
+}
+
+.AboutContainer > img {
+  height: 300px;
+  width: 300px;
+  background: none;
 }

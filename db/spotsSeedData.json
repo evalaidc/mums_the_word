@@ -32,8 +32,26 @@
     "blurb": "This building will change colors in time.",
     "author": "Lindsey",
     "address": "900 Delaware Ave SW, Washington, DC 20024",
-    "longitude": -77.012510 ,
+    "longitude": -77.012510,
     "latitude": 38.878844
+  },
+  {
+    "photo_url": "https://i1.wp.com/farm3.static.flickr.com/2026/3532218655_2e70a0f1b5.jpg",
+    "title": "Elephant Mountain",
+    "blurb": "Perfect skyline view of Taipei 101 and of Taipei with Mountains.",
+    "author": "Eva",
+    "address": "110, Taiwan, Taipei City, Xinyi District",
+    "longitude": 121.576957,
+    "latitude": 25.028702
+  },
+  {
+    "photo_url": "https://theprofessorstable.files.wordpress.com/2012/02/peccadillo.jpg",
+    "title": "Pecadillo",
+    "blurb": "Fancy Drinks with interesting artwork. No windows, nice and casual.",
+    "author": "Eva",
+    "address": "100 Brewer Ln, Carrboro, NC 27510",
+    "longitude": -79.065891,
+    "latitude": 35.909541
   }
 
 
