@@ -99,9 +99,9 @@ class NewSpotForm extends Component {
         <form onSubmit={(e) => {this.addNewSpot(e)}}>
           <input type="text" placeholder="Title" value={ this.state.title } onChange={(e) => this.setNewSpotTitle(e)}/>
           <br />
-          <input type="text" placeholder="Blurb" value={ this.state.blurb } onChange={(e) => this.setNewSpotBlurb(e)}/>
+          <input type="text" placeholder="Summary" value={ this.state.blurb } onChange={(e) => this.setNewSpotBlurb(e)}/>
           <br />
-          <a href='http://imgur.com/' target="_blank">Upload your own image here.</a> | <a href="http://www.wikihow.com/Get-the-URL-for-Pictures" target="_blank">Here is the "How" </a>
+          <a href="http://www.wikihow.com/Get-the-URL-for-Pictures" target="_blank">What`s an Image URL? </a> | <a href='http://imgur.com/' target="_blank">Upload your own image here.</a> 
           <br />
           <input type="text" placeholder="Image Url" value={ this.state.photo_url } onChange={(e) => this.setNewSpotPhoto(e)}/>
           <br />

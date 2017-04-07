@@ -4,11 +4,13 @@
   flex-direction: column;
   justify-content: center;
   align-content: center;
+  width: 80%;
 }
 .spotDets{
   background-color: rgba(101,115,126,.6);
   padding: 3px 10px;
   margin: 5px 0;
+  width: 100%;
 }
 .indivMap{
   margin: 30px 10px;
