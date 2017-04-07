@@ -36,7 +36,7 @@ class Spot extends Component {
           <br />
         </div>
         <div className='indivMap'>
-          <GoogleMap lat={this.state.selectedSpot.latitude} lng={this.state.selectedSpot.longitude}/>
+          <GoogleMap lat={this.state.selectedSpot.latitude} lng={this.state.selectedSpot.longitude} title={this.state.selectedSpot.title}/>
         </div>
       </div>
     )
