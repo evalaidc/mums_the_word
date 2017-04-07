@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/mums_the_word_db', (err, res) => {
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/mums_the_word_db', (err, res) => {
   if(err){
     console.log(err)
   } else {

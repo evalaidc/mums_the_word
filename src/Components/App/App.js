@@ -33,7 +33,7 @@ class App extends Component {
             <Link to="/About"> About </Link>
             <Link to="/Home"> List Spots </Link>
             </div>
-
+            <div id="iconimage"></div>
             <div className="links">
             <Link to="/Home/NewForm"> Make a New Mark </Link>
             <Link to="/Home/Map"> Map </Link>
@@ -45,7 +45,7 @@ class App extends Component {
               render={() => {
                 return (
                   <SpotsContainer
-                  url='api/spots'
+                  url='http://127.0.0.1:3101/api/spots'
                   interval={2000}
                   />
                 )
