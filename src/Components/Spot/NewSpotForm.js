@@ -88,9 +88,7 @@ class NewSpotForm extends Component {
     })
 
   }
-
-
-
+  
   render(){
 
     return(

@@ -32,14 +32,14 @@ export default class GoogleMap extends Component {
     let markers = []
     let infowindows = []
     // function to create markers
-    function addMarker(lati,long,title){
+    function addMarker(lati,long){
       var marker = new google.maps.Marker({
         position: {
           lat: lati,
           lng: long
         },
         map: self.map,
-        title: title
+        title: "Click for more details!"
 
       })
       markers.push(marker)
@@ -62,7 +62,7 @@ export default class GoogleMap extends Component {
     }
     // adding all markers using long and lats from data
     this.state.data.map((spot, index) => {
-      addMarker(spot.latitude, spot.longitude, spot.title)
+      addMarker(spot.latitude, spot.longitude)
       addInfoWindow(spot, spot.title, spot.blurb, spot.photo_url, spot.author ,spot.address)
 
         markers[index].addListener('click', function(){

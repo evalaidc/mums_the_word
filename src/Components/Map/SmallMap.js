@@ -16,7 +16,7 @@ export default class GoogleMap extends Component {
     })
     // function to make marker
     function addMarker(lati,long,title){
-      var marker = new google.maps.Marker({
+       marker = new google.maps.Marker({
         position: {
           lat: lati,
           lng: long
