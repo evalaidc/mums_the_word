@@ -10,6 +10,7 @@
     "google-map-react": "^0.23.0",
     "hbs": "^4.0.1",
     "marked": "^0.3.6",
+    "mongodb": "^2.2.25",
     "mongoose": "^4.9.2",
     "nodemon": "^1.11.0",
     "react": "^15.4.2",
@@ -22,7 +23,7 @@
     "react-scripts": "0.9.5"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=production MONGO_URL=yourMongoURL node index.js",
+    "start": "cross-env NODE_ENV=production MONGO_URL=yourMongoURL nodemon src/index.js",
     "start-dev": "nf start -p 3001",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
