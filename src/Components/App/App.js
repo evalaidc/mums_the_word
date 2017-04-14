@@ -43,7 +43,7 @@ class App extends Component {
               render={() => {
                 return (
                   <SpotsContainer
-                  url='/api/spots'
+                  url='http://localhost:3101/api/spots'
                   interval={2000}
                   />
                 )
@@ -53,6 +53,12 @@ class App extends Component {
               path="/spots/:title"
               component={Spot}
             />
+            <Route
+                path='/*'
+                  render={ () => {
+                    return <Redirect to='/Home' />
+                  }}
+              />
           </main>
         </div>
       </Router>

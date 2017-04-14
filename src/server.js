@@ -17,13 +17,13 @@ app.use(function(req, res, next) {
   next()
  })
 
-db.MongoClient.connect(process.env.MONGODB_URI, function(err, database){
-  if(err){
-    console.log(err)
-  }else {
-    console.log(database)
-  }
-})
+// db.MongoClient.connect(process.env.MONGODB_URI, function(err, database){
+//   if(err){
+//     console.log(err)
+//   }else {
+//     console.log(database)
+//   }
+// })
 
 
 
