@@ -43,7 +43,7 @@ class App extends Component {
               render={() => {
                 return (
                   <SpotsContainer
-                  url='http://localhost:3101/api/spots'
+                  url='/api/spots'
                   interval={2000}
                   />
                 )
