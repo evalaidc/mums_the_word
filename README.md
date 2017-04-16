@@ -20,7 +20,7 @@ As a User, I should be able to be able to create a new location for others to se
 As a User, I should be able to delete a location, if I deem it is not suitable.
 
 ## Resources/Technologies Used
-  MERN - MongoDB, Express, ReactJS, and nodejs
+  MERN - MongoDB, Mongoose, Express, ReactJS, and nodejs
 
 Websites:
 https://www.youtube.com/watch?v=FWg7d-g_di4&index=9&list=PLgGbWId6zgaXFR4SW_3qJ55cxmEqRNIzx
