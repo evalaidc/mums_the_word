@@ -1,6 +1,6 @@
 [
   {
-    "photo_url": "http://www.algonquinhotel.com/wp-content/uploads/2015/02/blue-bar.jpg",
+    "photo_url": "https://www.algonquinhotel.com/wp-content/uploads/2015/02/blue-bar.jpg",
     "title": "Blue Bar",
     "blurb": "Blue Bar is a cocktail bar hidden in Henley Park Hotel.",
     "author": "Eric",
@@ -18,7 +18,7 @@
     "latitude": 38.886989
   },
   {
-    "photo_url": "http://stationstart.com/wp-content/uploads/2010/05/cp_nc_bg_001-a.jpg",
+    "photo_url": "https://stationstart.com/wp-content/uploads/2010/05/cp_nc_bg_001-a.jpg",
     "title": "Bishop's Garden",
     "blurb": "The Bishop's Garden: Pilgrim Rd Washington, DC 20016",
     "author": "Ebenezer",

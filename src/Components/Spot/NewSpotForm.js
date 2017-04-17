@@ -69,7 +69,7 @@ class NewSpotForm extends Component {
     let latitude = this.state.latitude;
 
 
-    axios.post("https://mums-the-word.herokuapp.com/api/spots/new", {title, blurb, author, photo_url, address, longitude, latitude})
+    axios.post("https://10.184.9.56:38115/api/spots/new", {title, blurb, author, photo_url, address, longitude, latitude})
     .then(res => {
       console.log('created')
 
