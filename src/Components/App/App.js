@@ -43,7 +43,7 @@ class App extends Component {
               render={() => {
                 return (
                   <SpotsContainer
-                  url='https://mums-the-word.herokuapp.com/spots'
+                  url='https://mums-the-word.herokuapp.com/api/spots'
                   interval={2000}
                   />
                 )
