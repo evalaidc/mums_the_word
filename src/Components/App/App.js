@@ -53,12 +53,6 @@ class App extends Component {
               path="/spots/:title"
               component={Spot}
             />
-            <Route
-                path='/*'
-                  render={ () => {
-                    return <Redirect to='/Home' />
-                  }}
-              />
           </main>
         </div>
       </Router>
