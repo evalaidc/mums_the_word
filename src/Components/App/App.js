@@ -6,7 +6,8 @@ import About from '../../About.js'
 import {
   BrowserRouter as Router,
   Route,
-  Link
+  Link,
+  Redirect
 } from 'react-router-dom'
 
 class App extends Component {
@@ -42,7 +43,7 @@ class App extends Component {
               render={() => {
                 return (
                   <SpotsContainer
-                  url='https://mums-the-word.herokuapp.com/api/spots'
+                  url='http://localhost:3101/api/spots'
                   interval={2000}
                   />
                 )
@@ -52,6 +53,12 @@ class App extends Component {
               path="/spots/:title"
               component={Spot}
             />
+            <Route
+                path='/*'
+                  render={ () => {
+                    return <Redirect to='/Home' />
+                  }}
+              />
           </main>
         </div>
       </Router>
