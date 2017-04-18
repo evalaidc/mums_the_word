@@ -22,24 +22,24 @@ class App extends Component {
         <div>
           <nav>
             <div className="links">
-            <Link to="/"> About </Link>
-            <Link to="/Home"> List Spots </Link>
+            <Link to="/mums_the_word/"> About </Link>
+            <Link to="/mums_the_word/Home"> List Spots </Link>
             </div>
-            <Link to='/Home'>
+            <Link to='/mums_the_word/Home'>
               <div id="iconimage"></div>
             </Link>
             <div className="links">
-            <Link to="/Home/NewForm"> Make a New Mark </Link>
-            <Link to="/Home/Map"> Map </Link>
+            <Link to="/mums_the_word/Home/NewForm"> Make a New Mark </Link>
+            <Link to="/mums_the_word/Home/Map"> Map </Link>
             </div>
           </nav>
           <main>
             <Route
-              exact path="/"
+              exact path="/mums_the_word/"
               component={About}
             />
             <Route
-              path='/Home'
+              path='/mums_the_word/Home'
               render={() => {
                 return (
                   <SpotsContainer
@@ -50,13 +50,13 @@ class App extends Component {
               }}
             />
             <Route
-              path="/spots/:title"
+              path="/mums_the_word/spots/:title"
               component={Spot}
             />
             <Route
                 path='/*'
                   render={ () => {
-                    return <Redirect to='/Home' />
+                    return <Redirect to='/mums_the_word/Home' />
                   }}
               />
           </main>

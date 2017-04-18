@@ -8,7 +8,7 @@ class SpotList extends Component {
 
   render(){
     let locations = this.props.spots.map((spot, index) => {
-      let pathname = `/spots/${spot.title}`
+      let pathname = `/mums_the_word/spots/${spot.title}`
       return (
         <div className="ListImgs" key={index}>
         <Link to={
