@@ -13,10 +13,10 @@ const router = express.Router()
 //  res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE');
 //  res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers')
 //
-//  //and remove caching so we get the most recent updates
-//   res.setHeader('Cache-Control', 'no-cache')
-//   next()
-//  })
+ //and remove caching so we get the most recent updates
+  res.setHeader('Cache-Control', 'no-cache')
+  next()
+ })
 
 app.use(cors())
 
