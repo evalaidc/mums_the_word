@@ -38,7 +38,7 @@ class SpotsContainer extends Component {
     return(
       <div className='spotContainer'>
       <Route
-        exact path="/Home/Map"
+        exact path="/mums_the_word/Home/Map"
         render={() => {
           return (
             <GoogleMap spots={this.state.data}/>
@@ -47,7 +47,7 @@ class SpotsContainer extends Component {
       />
 
         <Route
-          path="/Home/NewForm"
+          path="/mums_the_word/Home/NewForm"
           render={() => {
             return (
               <NewSpotForm />
