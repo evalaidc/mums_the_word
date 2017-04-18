@@ -25,13 +25,12 @@
     "react-scripts": "0.9.5"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=production MONGO_URL=yourMongoURL node src/server.js",
+    "start": "react-scripts start",
     "start-dev": "nf start -p 3001",
     "build": "react-scripts build",
+    "deploy" : "npm run build&&gh-pages -d build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
   },
   "homepage": "https://evalaidc.github.io/mums_the_word"
 }
