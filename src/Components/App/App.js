@@ -43,7 +43,7 @@ class App extends Component {
               render={() => {
                 return (
                   <SpotsContainer
-                  url='http://localhost:3101/api/spots'
+                  url='https://heroku_fmbpqk9c:lk8t50talmb31ndm3i8a67qjvp@ds155490.mlab.com:55490/api/spots'
                   interval={2000}
                   />
                 )

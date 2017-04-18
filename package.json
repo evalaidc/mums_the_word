@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.15.3",
     "body-parser": "^1.17.1",
+    "cors": "^2.8.3",
     "express": "^4.15.2",
     "foreman": "^2.0.0",
     "google-map-react": "^0.23.0",
@@ -24,7 +25,7 @@
     "react-scripts": "0.9.5"
   },
   "scripts": {
-    "start": "cross-env NODE_ENV=production MONGO_URL=yourMongoURL nodemon src/index.js",
+    "start": "cross-env NODE_ENV=production MONGO_URL=yourMongoURL node src/server.js",
     "start-dev": "nf start -p 3001",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
