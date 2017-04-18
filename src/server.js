@@ -29,21 +29,21 @@ app.use(parser.urlencoded({extended: true}))
 app.use(parser.json())
 
 //Use our router configuration when we call /api
-app.use('/api', router)
+// app.use('/api', router)
 
 //now we can set the route path & initialize the API
-router.get('/', function(req, res) {
+app.get('/api', function(req, res) {
  res.json({ message: 'API Initialized!'});
 })
 // show all spots
-router.get('/spots', function(req, res){
+app.get('/api/spots', function(req, res){
   Spot.find({}).then( function(spots){
     res.json(spots)
   })
 })
 
 // create a new spot
-router.post("/spots/new", function(req, res){
+app.post("/api/spots/new", function(req, res){
   var spot = new Spot({
     title: req.body.title,
     author: req.body.author,
@@ -63,7 +63,7 @@ router.post("/spots/new", function(req, res){
 
 
 // show 1 specific spot
-router.get("/spots/:title", function(req,res) {
+app.get("/api/spots/:title", function(req,res) {
   Spot.findOne({title: req.params.title}).then(function(spot){
     res.json(spot)
   })
@@ -71,7 +71,7 @@ router.get("/spots/:title", function(req,res) {
 
 
 // delete a certain spot
-router.delete("/spots/:title", function(req, res){
+app.delete("/api/spots/:title", function(req, res){
   Spot.findOneAndRemove({title: req.params.title}).then(function(){
     res.json({success: true});
   });
