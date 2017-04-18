@@ -14,7 +14,7 @@ class Spot extends Component {
   handleSpotDelete(e){
     e.preventDefault()
     let title = this.state.selectedSpot.title
-    axios.delete(`https://heroku_fmbpqk9c:lk8t50talmb31ndm3i8a67qjvp@ds155490.mlab.com:55490/api/spots/${title}`)
+    axios.delete(`http://localhost:3101/api/spots/${title}`)
       .then(res => {
         console.log('Spot deleted');
         window.location.reload()
