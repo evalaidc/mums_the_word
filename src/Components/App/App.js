@@ -5,6 +5,7 @@ import Spot from '../Spot/Spot.js'
 import About from '../../About.js'
 import {
   BrowserRouter as Router,
+  ReactRouter,
   Route,
   Link,
   Redirect
@@ -16,21 +17,24 @@ class App extends Component {
 
     }
 
+    var browserHistory = ReactRouter.browserHistory;
+
+
   render() {
     return (
-      <Router>
+      <Router history={browserHistory}>
         <div>
           <nav>
             <div className="links">
             <Link to="/mums_the_word/"> About </Link>
-            <Link to="/mums_the_word/Home/"> List Spots </Link>
+            <Link to="/mums_the_word/Home"> List Spots </Link>
             </div>
-            <Link to='/mums_the_word/Home/'>
+            <Link to='/mums_the_word/Home'>
               <div id="iconimage"></div>
             </Link>
             <div className="links">
-            <Link to="/mums_the_word/Home/NewForm/"> Make a New Mark </Link>
-            <Link to="/mums_the_word/Home/Map/"> Map </Link>
+            <Link to="/mums_the_word/Home/NewForm"> Make a New Mark </Link>
+            <Link to="/mums_the_word/Home/Map"> Map </Link>
             </div>
           </nav>
           <main>
