@@ -1,23 +1,24 @@
 const express = require('express')
 const parser = require('body-parser');
+const cors = require('cors');
 const mongoose = require('../db/connection.js');
 const Spot = require('../db/models.js').Spot
 
 const app = express()
 const router = express.Router()
-// maybe use this to connect front end to backend, cross origin resource sharing
-app.use(function(req, res, next) {
- res.setHeader('Access-Control-Allow-Origin', '*');
- res.setHeader('Access-Control-Allow-Credentials', 'true');
- res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE');
- res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers')
+// // maybe use this to connect front end to backend, cross origin resource sharing
+// app.use(function(req, res, next) {
+//  res.setHeader('Access-Control-Allow-Origin', '*');
+//  res.setHeader('Access-Control-Allow-Credentials', 'true');
+//  res.setHeader('Access-Control-Allow-Methods', 'GET,HEAD,OPTIONS,POST,PUT,DELETE');
+//  res.setHeader('Access-Control-Allow-Headers', 'Access-Control-Allow-Headers, Origin,Accept, X-Requested-With, Content-Type, Access-Control-Request-Method, Access-Control-Request-Headers')
+//
+//  //and remove caching so we get the most recent updates
+//   res.setHeader('Cache-Control', 'no-cache')
+//   next()
+//  })
 
- //and remove caching so we get the most recent updates
-  res.setHeader('Cache-Control', 'no-cache')
-  next()
- })
-
-
+app.use(cors())
 
 
 app.set('view engine', 'react')

@@ -6,8 +6,7 @@ import About from '../../About.js'
 import {
   BrowserRouter as Router,
   Route,
-  Link,
-  Redirect
+  Link
 } from 'react-router-dom'
 
 class App extends Component {
