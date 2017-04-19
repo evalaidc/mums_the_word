@@ -107,13 +107,13 @@ class NewSpotForm extends Component {
           <br />
           <input type="text" placeholder="Address"  value={ this.state.address } onChange={(e) => this.setNewSpotAddress(e)}/>
           <br />
-          <a href='http://www.latlong.net/' target="_blank"> Find Longitude </a>
-          <br />
-          <input type="number" step="any" value={ this.state.longitude } placeholder="Longitude" onChange={(e) => this.setNewSpotLongitude(e)}/>
-          <br />
           <a href='http://www.latlong.net/' target="_blank"> Find Latitude </a>
           <br />
-          <input type="number" step="any" value={ this.state.latitude } placeholder="Latitude" onChange={(e) => this.setNewSpotLatitude(e)}/>
+          <input type="number" step="any" value={ this.state.latitude } placeholder="Latitude" onChange={(e) => this.setNewSpotLongitude(e)}/>
+          <br />
+          <a href='http://www.latlong.net/' target="_blank"> Find Longitude </a>
+          <br />
+          <input type="number" step="any" value={ this.state.longitude } placeholder="Longitude" onChange={(e) => this.setNewSpotLatitude(e)}/>
           <br />
           <button type="submit">Add Spot</button>
         </form>
