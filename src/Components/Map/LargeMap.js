@@ -19,7 +19,7 @@ export default class GoogleMap extends Component {
 
 
   componentDidMount(){
-    // 2nd parameter - custimzation of how the map works
+    // 2nd parameter - customization of how the map works
     // 1st param - tells google map to attempt to render itself to the div that
       //has the ref.
         // create new google map and insert it into that div

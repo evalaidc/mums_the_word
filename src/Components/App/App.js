@@ -5,11 +5,12 @@ import Spot from '../Spot/Spot.js'
 import About from '../../About.js'
 import {
   BrowserRouter as Router,
-  ReactRouter,
   Route,
   Link,
   Redirect
 } from 'react-router-dom'
+
+
 
 class App extends Component {
   constructor(props){
@@ -17,12 +18,9 @@ class App extends Component {
 
     }
 
-    var browserHistory = ReactRouter.browserHistory;
-
-
   render() {
     return (
-      <Router history={browserHistory}>
+      <Router>
         <div>
           <nav>
             <div className="links">
