@@ -5,6 +5,7 @@ import Spot from '../Spot/Spot.js'
 import About from '../../About.js'
 import {
   BrowserRouter as Router,
+  hashHistory,
   Route,
   Link,
   Redirect
@@ -13,14 +14,14 @@ import {
 
 
 class App extends Component {
-  constructor(props){
-    super(props)
-
-    }
+//   constructor(props){
+//     super(props)
+//
+//     }
 
   render() {
     return (
-      <Router>
+      <Router history={hashHistory}>
         <div>
           <nav>
             <div className="links">
